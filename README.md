@@ -1,4 +1,4 @@
-# detatched
+# detached
 
 RFID Pi setup guide
 This is the guide for setting up Raspberry Pis for the project "Detached Touch". It is run from three Arduinos all running the same code with RFID tag readers attached, one Raspberry Pi, a Python script and a monitor.
