@@ -35,6 +35,8 @@ void loop()
      content.concat(String(mfrc522.uid.uidByte[i], HEX));
   }
   content.toUpperCase();
+  Serial.println();
+  delay(3000);
   /*if (content.substring(1) == "C3 45 33 0B") //change here the UID of the card/cards that you want to give access
   {
     delay(500);
