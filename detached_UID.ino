@@ -14,21 +14,21 @@ void setup()
   Serial.begin(9600);   // Initiate a serial communication
   SPI.begin();      // Initiate  SPI bus
   mfrc522.PCD_Init();   // Initiate MFRC522
-  //Serial.println();
+  Serial.println();
 }
 void loop() 
 {
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
-    Serial.println("not read");
+    Serial.println("");
     delay(100);
     return;
   }
   // Select one of the cards
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
-    Serial.println("not read");
+    Serial.println("");
     delay(100);
     return;
   }
@@ -46,5 +46,8 @@ void loop()
   content.toUpperCase();
   Serial.println();
   delay(1000);
-
+  Serial.println(content);
+  delay(100);
+  
+  Serial.flush();
 } 
